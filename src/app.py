@@ -3,7 +3,7 @@ from flask import Flask, jsonify, request
 # initialize our Flask application
 app= Flask(__name__)
 @app.route("/post-to-me", methods=["POST"])
-def postImageToSlack():
+def postMessageBack():
     if request.method=='POST':
         posted_data = str(request.get_json())
         return jsonify("You sent {}".format(posted_data))
